@@ -1,205 +1,79 @@
-import json
-import streamlit as st
+from flask import Flask, render_template, request, send_file
+import json, os, io
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
-import io
-import requests
 
-# -------------------------------
-# Custom CSS for Color-Coded Buttons
-# -------------------------------
-st.markdown(
-    """
-    <style>
-    /* Submit Answer = Green */
-    div[data-testid="stForm"] button {
-        background-color: #4CAF50 !important;
-        color: white !important;
-        font-weight: bold;
-    }
-    div[data-testid="stForm"] button:hover {
-        background-color: #45a049 !important;
-    }
+app = Flask(__name__)
 
-    /* Navigation buttons by column */
-    div[data-testid="stForm"] div:nth-child(1) button { background-color: #FF9800 !important; } /* Previous = Orange */
-    div[data-testid="stForm"] div:nth-child(2) button { background-color: #2196F3 !important; } /* Next = Blue */
-    div[data-testid="stForm"] div:nth-child(3) button { background-color: #9C27B0 !important; } /* Back to Top = Purple */
-    div[data-testid="stForm"] div:nth-child(4) button { background-color: #FFC107 !important; color: black !important; } /* Reset = Yellow */
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+@app.route("/")
+def splash():
+    return render_template("splash.html")
 
-# -------------------------------
-# Initialize session state
-# -------------------------------
-if "index" not in st.session_state:
-    st.session_state.index = 0
-    st.session_state.score = 0
-    st.session_state.show_feedback = False
-    st.session_state.mode = "Splash"
-    st.session_state.paid_status = False
+@app.route("/quiz/<grade>")
+def quiz(grade):
+    filename = f"questions_grade{grade}.json"
+    filepath = os.path.join(os.path.dirname(__file__), filename)
 
-# -------------------------------
-# Sidebar Navigation
-# -------------------------------
-st.sidebar.image("logo.png", width=200)
-st.sidebar.title("Smart7 Navigation")
-
-BACKEND_URL = "https://sectional-sighing-moonshine.ngrok-free.dev"
-
-try:
-    response = requests.get(f"{BACKEND_URL}/payment-status")
-    st.session_state.paid_status = response.json().get("paid", False)
-except Exception:
-    pass
-
-mode = st.sidebar.radio("Select Mode:", ["Splash", "Demo Mode", "Full Mode", "Admin"], key="mode_selector")
-difficulty = st.sidebar.radio("Select Difficulty:", ["Easy", "Medium", "Hard"], key="difficulty_selector")
-topic = st.sidebar.radio("Select Topic:", ["Algebra", "Geometry", "Fractions"], key="topic_selector")
-grade = st.sidebar.radio("Select Grade:", ["8", "9", "10", "11", "12"], key="grade_selector")
-
-# -------------------------------
-# Load questions dynamically
-# -------------------------------
-grade_files = {
-    "8": "questions/questions_grade8.json",
-    "9": "questions/questions_grade9.json",
-    "10": "questions/questions_grade10.json",
-    "11": "questions/questions_grade11.json",
-    "12": "questions/questions_grade12.json"
-}
-selected_file = grade_files.get(grade, "questions/questions_demo.json")
-
-try:
-    with open(selected_file, "r", encoding="utf-8") as f:
-        all_questions = json.load(f)
-except FileNotFoundError:
-    st.error(f"❌ Question file for Grade {grade} not found.")
-    all_questions = []
-
-filtered_questions = [
-    q for q in all_questions
-    if (difficulty == "All" or q.get("difficulty") == difficulty or "difficulty" not in q)
-    and (topic == "All" or q.get("topic") == topic or "topic" not in q)
-]
-
-
-# -------------------------------
-# Mode Handling
-# -------------------------------
-if mode == "Splash":
-    st.title("👋 Welcome to Smart7 Senior")
-    st.markdown("""
-    Smart7 Senior is a learning tool designed for **Grade 8–12 learners** to practice and master key maths concepts.
-
-    ✨ **Features:**
-    - Demo Mode: 10 free questions
-    - Full Mode: Unlock all 100 questions with Yoco
-    - Covers fractions, algebra, geometry, word problems, and probability
-    - Instant feedback with clear explanations
-    - Achievement certificate after completing all questions
-    """)
-    st.info("Select a mode from the sidebar to begin.")
-    active_questions = []
-
-elif mode == "Demo Mode":
-    st.sidebar.info(f"🔓 Demo Mode: Free sample of 10 Grade {grade} questions.")
-    active_questions = filtered_questions[:10]
-
-elif mode == "Full Mode":
-    st.sidebar.success("✅ Full Mode: Unlock all 100 questions.")
-    if not st.session_state.paid_status:
-        st.sidebar.warning("🔒 Please complete payment to unlock all questions.")
-        st.sidebar.markdown("[💳 Pay with Yoco](https://pay.yoco.com/stocklinksa)")
-        active_questions = filtered_questions[:10]
+    if os.path.exists(filepath):
+        with open(filepath, "r", encoding="utf-8") as f:
+            questions = json.load(f)
+        return render_template("quiz.html", grade=grade, questions=questions)
     else:
-        st.success("Payment confirmed! 🎉 Full access unlocked.")
-        active_questions = filtered_questions
+        return f"No questions found for grade {grade}", 404
 
-elif mode == "Admin":
-    st.sidebar.warning("⚙️ Admin Panel")
-    st.write("Coming soon: question management and stats.")
-    active_questions = []
+@app.route("/submit", methods=["POST"])
+def submit():
+    grade = request.form.get("grade")
+    filename = f"questions_grade{grade}.json"
+    filepath = os.path.join(os.path.dirname(__file__), filename)
 
-# -------------------------------
-# Quiz Loop
-# -------------------------------
-if active_questions and st.session_state.index < len(active_questions):
-    q = active_questions[st.session_state.index]
+    score, total = 0, 0
+    if os.path.exists(filepath):
+        with open(filepath, "r", encoding="utf-8") as f:
+            questions = json.load(f)
+        total = len(questions)
+        for i, q in enumerate(questions, start=1):
+            user_answer = request.form.get(f"q{i}")
+            if user_answer == q.get("answer"):
+                score += 1
 
-    st.subheader(f"Question {st.session_state.index+1} of {len(active_questions)}")
-    st.write(q.get("question", "No question text found"))
+    return render_template("summary.html", score=score, total=total, grade=grade)
 
-    choice = st.radio("Choose an answer:", q.get("options", []), key=f"radio_{st.session_state.index}")
+@app.route("/certificate", methods=["POST"])
+def certificate():
+    name = request.form.get("name", "Learner")
+    score = int(request.form.get("score", 0))
+    total = int(request.form.get("total", 0))
+    percent = (score / total * 100) if total > 0 else 0
 
-    # Submit Answer
-    with st.form(key=f"answer_form_{st.session_state.index}", clear_on_submit=False):
-        submitted = st.form_submit_button("Submit Answer")
-        if submitted:
-            if choice == q.get("answer"):
-                st.success("Correct!")
-                st.session_state.score += 1
-            else:
-                st.error("Incorrect.")
-                st.info(q.get("explanation", "No explanation available."))
-            st.session_state.show_feedback = True
+    buffer = io.BytesIO()
+    c = canvas.Canvas(buffer, pagesize=letter)
+    width, height = letter
 
-    # Navigation
-    with st.form(key=f"nav_form_{st.session_state.index}", clear_on_submit=False):
-        col1, col2, col3, col4 = st.columns(4)
-        prev_btn = col1.form_submit_button("Previous")
-        next_btn = col2.form_submit_button("Next")
-        top_btn  = col3.form_submit_button("Back to Top")
-        reset_btn = col4.form_submit_button("Reset Quiz")
+    c.setFont("Helvetica-Bold", 24)
+    c.drawCentredString(width/2, height-100, "Smart7 Achievement Certificate")
 
-        if prev_btn and st.session_state.index > 0:
-            st.session_state.index -= 1
-        if next_btn and st.session_state.index < len(active_questions) - 1:
-            st.session_state.index += 1
-        if top_btn:
-            st.session_state.index = 0
-        if reset_btn:
-            st.session_state.index = 0
-            st.session_state.score = 0
-
-elif active_questions and st.session_state.index >= len(active_questions):
-    st.success("Quiz complete! 🎉")
-    st.write(f"Your final score: {st.session_state.score}/{len(active_questions)}")
-    percent = (st.session_state.score / len(active_questions)) * 100
-    st.write(f"Percentage: {percent:.1f}%")
+    c.setFont("Helvetica", 14)
+    c.drawCentredString(width/2, height-180, f"Presented to {name}")
+    c.drawCentredString(width/2, height-220, f"Completed {total} questions")
+    c.drawCentredString(width/2, height-240, f"Score: {score}/{total} ({percent:.1f}%)")
 
     if percent >= 80:
-        st.success("🌟 Gold Achievement")
+        c.drawCentredString(width/2, height-280, "🌟 Gold Achievement")
     elif percent >= 60:
-        st.info("🥈 Silver Achievement")
+        c.drawCentredString(width/2, height-280, "🥈 Silver Achievement")
     elif percent >= 40:
-        st.warning("🥉 Bronze Achievement")
+        c.drawCentredString(width/2, height-280, "🥉 Bronze Achievement")
     else:
-        st.error("💡 Keep practicing!")
+        c.drawCentredString(width/2, height-280, "💡 Keep practicing!")
 
-    # Certificate
-    def create_certificate(name, score, total, percent):
-        buffer = io.BytesIO()
-        c = canvas.Canvas(buffer, pagesize=letter)
-        width, height = letter
-        c.setFont("Helvetica-Bold", 24)
-        c.drawCentredString(width/2, height-100, "Smart7 Achievement Certificate")
-        c.setFont("Helvetica", 14)
-        c.drawCentredString(width/2, height-220, f"Completed {total} questions with {score}/{total} ({percent:.1f}%).")
-        c.showPage()
-        c.save()
-        buffer.seek(0)
-        return buffer
+    c.showPage()
+    c.save()
+    buffer.seek(0)
 
-    name = st.text_input("Enter your name for the certificate:")
-    if name:
-        pdf_buffer = create_certificate(name, st.session_state.score, len(active_questions), percent)
-        st.download_button("📄 Download PDF Certificate", data=pdf_buffer, file_name="Smart7_Certificate.pdf", mime="application/pdf")
+    return send_file(buffer, as_attachment=True,
+                     download_name="Smart7_Certificate.pdf",
+                     mimetype="application/pdf")
 
-    if st.button("Reset Quiz", key="reset_btn_summary"):
-        st.session_state.index = 0
-        st.session_state.score = 0
-        st.session_state.show_feedback = False
-        st.rerun()
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
