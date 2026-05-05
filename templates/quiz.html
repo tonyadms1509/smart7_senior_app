@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart7 Quiz</title>
+</head>
+<body>
+    <h2>Question {{ index }} of {{ total }}</h2>
+    <p>{{ question["question"] }}</p>
+
+    <form method="POST">
+        {% for opt in question["options"] %}
+            <input type="radio" name="choice" value="{{ opt }}"> {{ opt }}<br>
+        {% endfor %}
+        <button type="submit">Submit Answer</button>
+    </form>
+
+    {% if explanation %}
+        <p>{{ explanation }}</p>
+    {% endif %}
+</body>
+</html>

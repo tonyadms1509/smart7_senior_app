@@ -1,0 +1,621 @@
+[
+  {
+    "question": "Simplify: 3a + 7a",
+    "options": ["10a", "a^2", "21a", "4a"],
+    "answer": "10a",
+    "explanation": "Combine like terms: 3a + 7a = 10a."
+  },
+  {
+    "question": "Evaluate: 5 × (2 + 3)",
+    "options": ["10", "15", "25", "20"],
+    "answer": "25",
+    "explanation": "Work inside brackets first: 2 + 3 = 5, then 5 × 5 = 25."
+  },
+  {
+    "question": "Find x if 4x = 28",
+    "options": ["6", "7", "8", "9"],
+    "answer": "7",
+    "explanation": "Divide both sides by 4: x = 28 ÷ 4 = 7."
+  },
+  {
+    "question": "Simplify: 2(x + 5)",
+    "options": ["2x + 10", "x + 7", "2x + 5", "x + 10"],
+    "answer": "2x + 10",
+    "explanation": "Distribute: 2 × x = 2x, 2 × 5 = 10."
+  },
+  {
+    "question": "Evaluate: 3^2 + 2^3",
+    "options": ["17", "13", "12", "11"],
+    "answer": "17",
+    "explanation": "3^2 = 9, 2^3 = 8, total = 17."
+  },
+  {
+    "question": "Solve for y: y/3 = 9",
+    "options": ["27", "3", "12", "18"],
+    "answer": "27",
+    "explanation": "Multiply both sides by 3: y = 9 × 3 = 27."
+  },
+  {
+    "question": "Simplify: (x + 2) + (x + 5)",
+    "options": ["2x + 7", "x^2 + 7", "x + 7", "2x + 5"],
+    "answer": "2x + 7",
+    "explanation": "Combine like terms: x + x = 2x, 2 + 5 = 7."
+  },
+  {
+    "question": "Find the perimeter of a square with side length 6 cm",
+    "options": ["12 cm", "18 cm", "24 cm", "36 cm"],
+    "answer": "24 cm",
+    "explanation": "Perimeter = 4 × side = 4 × 6 = 24 cm."
+  },
+  {
+    "question": "Simplify: 15 ÷ 3 + 2",
+    "options": ["7", "5", "6", "8"],
+    "answer": "7",
+    "explanation": "15 ÷ 3 = 5, then 5 + 2 = 7."
+  },
+  {
+    "question": "Solve: 2x + 6 = 14",
+    "options": ["4", "5", "6", "7"],
+    "answer": "4",
+    "explanation": "Subtract 6: 2x = 8, divide by 2: x = 4."
+  },
+  
+  {
+    "question": "Simplify: 6x - 2x",
+    "options": ["4x", "8x", "x^2", "2x"],
+    "answer": "4x",
+    "explanation": "Subtract like terms: 6x - 2x = 4x."
+  },
+  {
+    "question": "Evaluate: (12 ÷ 3) + 5",
+    "options": ["7", "8", "9", "10"],
+    "answer": "9",
+    "explanation": "12 ÷ 3 = 4, then 4 + 5 = 9."
+  },
+  {
+    "question": "Solve for y: 3y = 24",
+    "options": ["6", "7", "8", "9"],
+    "answer": "8",
+    "explanation": "Divide both sides by 3: y = 24 ÷ 3 = 8."
+  },
+  {
+    "question": "Simplify: (x + 3)(x + 2)",
+    "options": ["x^2 + 5x + 6", "x^2 + 6x + 5", "x^2 + 3x + 2", "x^2 + 2x + 3"],
+    "answer": "x^2 + 5x + 6",
+    "explanation": "Multiply out: x×x=x^2, x×2=2x, 3×x=3x, 3×2=6. Total = x^2+5x+6."
+  },
+  {
+    "question": "Find the area of a rectangle with length 8 cm and width 5 cm",
+    "options": ["40 cm²", "13 cm²", "25 cm²", "30 cm²"],
+    "answer": "40 cm²",
+    "explanation": "Area = length × width = 8 × 5 = 40 cm²."
+  },
+  {
+    "question": "Simplify: 2^4",
+    "options": ["8", "12", "16", "20"],
+    "answer": "16",
+    "explanation": "2^4 means 2 × 2 × 2 × 2 = 16."
+  },
+  {
+    "question": "Solve: 5x + 10 = 25",
+    "options": ["3", "4", "5", "6"],
+    "answer": "3",
+    "explanation": "Subtract 10: 5x = 15, divide by 5: x = 3."
+  },
+  {
+    "question": "Simplify: (x^2 + 2x) + (3x^2 + x)",
+    "options": ["4x^2 + 3x", "4x^2 + 2x", "x^2 + 3x^2", "5x^2 + 3x"],
+    "answer": "4x^2 + 3x",
+    "explanation": "Combine like terms: x^2+3x^2=4x^2, 2x+x=3x."
+  },
+  {
+    "question": "Find the perimeter of a triangle with sides 5 cm, 7 cm, and 8 cm",
+    "options": ["20 cm", "21 cm", "22 cm", "23 cm"],
+    "answer": "20 cm",
+    "explanation": "Perimeter = sum of sides = 5 + 7 + 8 = 20 cm."
+  },
+  {
+    "question": "Solve: y - 9 = 15",
+    "options": ["24", "25", "26", "27"],
+    "answer": "24",
+    "explanation": "Add 9: y = 15 + 9 = 24."
+  },
+  
+  {
+    "question": "Simplify: 9x + 4x",
+    "options": ["13x", "14x", "15x", "12x"],
+    "answer": "13x",
+    "explanation": "Combine like terms: 9x + 4x = 13x."
+  },
+  {
+    "question": "Evaluate: (18 ÷ 6) × 2",
+    "options": ["4", "5", "6", "7"],
+    "answer": "6",
+    "explanation": "18 ÷ 6 = 3, then 3 × 2 = 6."
+  },
+  {
+    "question": "Solve for y: y + 12 = 20",
+    "options": ["6", "7", "8", "9"],
+    "answer": "8",
+    "explanation": "Subtract 12: y = 20 - 12 = 8."
+  },
+  {
+    "question": "Expand: (x+6)(x+1)",
+    "options": ["x^2 + 7x + 6", "x^2 + 6x + 1", "x^2 + 2x + 6", "x^2 + 12x + 1"],
+    "answer": "x^2 + 7x + 6",
+    "explanation": "Multiply out: x×x=x^2, x×1=1x, 6×x=6x, 6×1=6. Total = x^2+7x+6."
+  },
+  {
+    "question": "Find the area of a triangle with base 10 cm and height 6 cm",
+    "options": ["30 cm²", "60 cm²", "15 cm²", "20 cm²"],
+    "answer": "30 cm²",
+    "explanation": "Area = ½ × base × height = ½ × 10 × 6 = 30 cm²."
+  },
+  {
+    "question": "Simplify: 3^3",
+    "options": ["6", "9", "27", "12"],
+    "answer": "27",
+    "explanation": "3^3 means 3 × 3 × 3 = 27."
+  },
+  {
+    "question": "Solve: 7x - 14 = 0",
+    "options": ["2", "3", "4", "5"],
+    "answer": "2",
+    "explanation": "Add 14: 7x = 14, divide by 7: x = 2."
+  },
+  {
+    "question": "Simplify: (2x + 3) + (x + 4)",
+    "options": ["3x + 7", "2x + 7", "x^2 + 7", "3x + 4"],
+    "answer": "3x + 7",
+    "explanation": "Combine like terms: 2x+x=3x, 3+4=7."
+  },
+  {
+    "question": "Find the perimeter of a square with side length 9 cm",
+    "options": ["18 cm", "27 cm", "36 cm", "45 cm"],
+    "answer": "36 cm",
+    "explanation": "Perimeter = 4 × side = 4 × 9 = 36 cm."
+  },
+  {
+    "question": "Solve: 4y - 8 = 12",
+    "options": ["4", "5", "6", "7"],
+    "answer": "5",
+    "explanation": "Add 8: 4y = 20, divide by 4: y = 5."
+  },
+  
+  {
+    "question": "Simplify: 12x - 7x",
+    "options": ["5x", "19x", "7x", "6x"],
+    "answer": "5x",
+    "explanation": "Subtract like terms: 12x - 7x = 5x."
+  },
+  {
+    "question": "Evaluate: (20 ÷ 4) + 9",
+    "options": ["12", "13", "14", "15"],
+    "answer": "14",
+    "explanation": "20 ÷ 4 = 5, then 5 + 9 = 14."
+  },
+  {
+    "question": "Solve for y: 2y + 8 = 18",
+    "options": ["4", "5", "6", "7"],
+    "answer": "5",
+    "explanation": "Subtract 8: 2y = 10, divide by 2: y = 5."
+  },
+  {
+    "question": "Expand: (x+3)(x+7)",
+    "options": ["x^2 + 10x + 21", "x^2 + 7x + 3", "x^2 + 21x", "x^2 + 9x + 10"],
+    "answer": "x^2 + 10x + 21",
+    "explanation": "Multiply out: x×x=x^2, x×7=7x, 3×x=3x, 3×7=21. Total = x^2+10x+21."
+  },
+  {
+    "question": "Find the area of a rectangle with length 12 cm and width 4 cm",
+    "options": ["48 cm²", "16 cm²", "36 cm²", "24 cm²"],
+    "answer": "48 cm²",
+    "explanation": "Area = length × width = 12 × 4 = 48 cm²."
+  },
+  {
+    "question": "Simplify: 4^2 + 2^2",
+    "options": ["18", "20", "16", "12"],
+    "answer": "20",
+    "explanation": "4^2 = 16, 2^2 = 4, total = 20."
+  },
+  {
+    "question": "Solve: 9x - 27 = 0",
+    "options": ["2", "3", "4", "5"],
+    "answer": "3",
+    "explanation": "Add 27: 9x = 27, divide by 9: x = 3."
+  },
+  {
+    "question": "Simplify: (x + 5) + (2x + 1)",
+    "options": ["3x + 6", "2x + 6", "x^2 + 6", "3x + 1"],
+    "answer": "3x + 6",
+    "explanation": "Combine like terms: x+2x=3x, 5+1=6."
+  },
+  {
+    "question": "Find the perimeter of a rectangle with length 10 cm and width 7 cm",
+    "options": ["34 cm", "30 cm", "28 cm", "24 cm"],
+    "answer": "34 cm",
+    "explanation": "Perimeter = 2(length + width) = 2(10+7) = 34 cm."
+  },
+  {
+    "question": "Solve: y/5 = 9",
+    "options": ["45", "9", "15", "50"],
+    "answer": "45",
+    "explanation": "Multiply both sides by 5: y = 9 × 5 = 45."
+  },
+  
+  {
+    "question": "Simplify: 15x + 10x",
+    "options": ["25x", "20x", "30x", "35x"],
+    "answer": "25x",
+    "explanation": "Combine like terms: 15x + 10x = 25x."
+  },
+  {
+    "question": "Evaluate: (30 ÷ 5) × 3",
+    "options": ["15", "18", "20", "12"],
+    "answer": "18",
+    "explanation": "30 ÷ 5 = 6, then 6 × 3 = 18."
+  },
+  {
+    "question": "Solve for y: y - 11 = 19",
+    "options": ["30", "31", "28", "29"],
+    "answer": "30",
+    "explanation": "Add 11: y = 19 + 11 = 30."
+  },
+  {
+    "question": "Expand: (x+8)(x+2)",
+    "options": ["x^2 + 10x + 16", "x^2 + 8x + 2", "x^2 + 16x", "x^2 + 6x + 8"],
+    "answer": "x^2 + 10x + 16",
+    "explanation": "Multiply out: x×x=x^2, x×2=2x, 8×x=8x, 8×2=16. Total = x^2+10x+16."
+  },
+  {
+    "question": "Find the area of a square with side length 12 cm",
+    "options": ["144 cm²", "24 cm²", "48 cm²", "36 cm²"],
+    "answer": "144 cm²",
+    "explanation": "Area = side × side = 12 × 12 = 144 cm²."
+  },
+  {
+    "question": "Simplify: 5^2 - 3^2",
+    "options": ["16", "25", "9", "22"],
+    "answer": "16",
+    "explanation": "5^2 = 25, 3^2 = 9, difference = 25 - 9 = 16."
+  },
+  {
+    "question": "Solve: 6x + 4 = 22",
+    "options": ["3", "4", "5", "6"],
+    "answer": "3",
+    "explanation": "Subtract 4: 6x = 18, divide by 6: x = 3."
+  },
+  {
+    "question": "Simplify: (2x + 7) + (3x + 1)",
+    "options": ["5x + 8", "5x + 7", "2x + 8", "3x + 7"],
+    "answer": "5x + 8",
+    "explanation": "Combine like terms: 2x+3x=5x, 7+1=8."
+  },
+  {
+    "question": "Find the perimeter of a triangle with sides 6 cm, 8 cm, and 10 cm",
+    "options": ["24 cm", "26 cm", "28 cm", "30 cm"],
+    "answer": "24 cm",
+    "explanation": "Perimeter = 6 + 8 + 10 = 24 cm."
+  },
+  {
+    "question": "Solve: 3y - 15 = 0",
+    "options": ["3", "4", "5", "6"],
+    "answer": "5",
+    "explanation": "Add 15: 3y = 15, divide by 3: y = 5."
+  },
+  
+  {
+    "question": "Simplify: 20x - 8x",
+    "options": ["12x", "28x", "10x", "8x"],
+    "answer": "12x",
+    "explanation": "Subtract like terms: 20x - 8x = 12x."
+  },
+  {
+    "question": "Evaluate: (36 ÷ 6) + 4",
+    "options": ["8", "9", "10", "12"],
+    "answer": "10",
+    "explanation": "36 ÷ 6 = 6, then 6 + 4 = 10."
+  },
+  {
+    "question": "Solve for y: 5y = 45",
+    "options": ["7", "8", "9", "10"],
+    "answer": "9",
+    "explanation": "Divide both sides by 5: y = 45 ÷ 5 = 9."
+  },
+  {
+    "question": "Expand: (x+9)(x+1)",
+    "options": ["x^2 + 10x + 9", "x^2 + 9x + 1", "x^2 + 11x + 9", "x^2 + 8x + 9"],
+    "answer": "x^2 + 10x + 9",
+    "explanation": "Multiply out: x×x=x^2, x×1=1x, 9×x=9x, 9×1=9. Total = x^2+10x+9."
+  },
+  {
+    "question": "Find the area of a rectangle with length 15 cm and width 6 cm",
+    "options": ["90 cm²", "75 cm²", "60 cm²", "45 cm²"],
+    "answer": "90 cm²",
+    "explanation": "Area = length × width = 15 × 6 = 90 cm²."
+  },
+  {
+    "question": "Simplify: 2^5",
+    "options": ["32", "25", "20", "16"],
+    "answer": "32",
+    "explanation": "2^5 means 2 × 2 × 2 × 2 × 2 = 32."
+  },
+  {
+    "question": "Solve: 8x + 12 = 28",
+    "options": ["2", "3", "4", "5"],
+    "answer": "2",
+    "explanation": "Subtract 12: 8x = 16, divide by 8: x = 2."
+  },
+  {
+    "question": "Simplify: (3x + 4) + (2x + 6)",
+    "options": ["5x + 10", "5x + 8", "3x + 10", "2x + 10"],
+    "answer": "5x + 10",
+    "explanation": "Combine like terms: 3x+2x=5x, 4+6=10."
+  },
+  {
+    "question": "Find the perimeter of a square with side length 11 cm",
+    "options": ["44 cm", "33 cm", "22 cm", "55 cm"],
+    "answer": "44 cm",
+    "explanation": "Perimeter = 4 × side = 4 × 11 = 44 cm."
+  },
+  {
+    "question": "Solve: y + 18 = 40",
+    "options": ["20", "21", "22", "23"],
+    "answer": "22",
+    "explanation": "Subtract 18: y = 40 - 18 = 22."
+  },
+  
+  {
+    "question": "Simplify: 25x - 15x",
+    "options": ["10x", "20x", "15x", "30x"],
+    "answer": "10x",
+    "explanation": "Subtract like terms: 25x - 15x = 10x."
+  },
+  {
+    "question": "Evaluate: (40 ÷ 8) + 12",
+    "options": ["15", "16", "17", "18"],
+    "answer": "17",
+    "explanation": "40 ÷ 8 = 5, then 5 + 12 = 17."
+  },
+  {
+    "question": "Solve for y: 4y - 20 = 0",
+    "options": ["4", "5", "6", "7"],
+    "answer": "5",
+    "explanation": "Add 20: 4y = 20, divide by 4: y = 5."
+  },
+  {
+    "question": "Expand: (x+10)(x+2)",
+    "options": ["x^2 + 12x + 20", "x^2 + 10x + 2", "x^2 + 8x + 20", "x^2 + 11x + 20"],
+    "answer": "x^2 + 12x + 20",
+    "explanation": "Multiply out: x×x=x^2, x×2=2x, 10×x=10x, 10×2=20. Total = x^2+12x+20."
+  },
+  {
+    "question": "Find the area of a triangle with base 12 cm and height 10 cm",
+    "options": ["60 cm²", "120 cm²", "100 cm²", "80 cm²"],
+    "answer": "60 cm²",
+    "explanation": "Area = ½ × base × height = ½ × 12 × 10 = 60 cm²."
+  },
+  {
+    "question": "Simplify: 6^2",
+    "options": ["12", "18", "36", "42"],
+    "answer": "36",
+    "explanation": "6^2 means 6 × 6 = 36."
+  },
+  {
+    "question": "Solve: 10x + 5 = 35",
+    "options": ["2", "3", "4", "5"],
+    "answer": "3",
+    "explanation": "Subtract 5: 10x = 30, divide by 10: x = 3."
+  },
+  {
+    "question": "Simplify: (4x + 6) + (x + 9)",
+    "options": ["5x + 15", "5x + 14", "4x + 15", "5x + 9"],
+    "answer": "5x + 15",
+    "explanation": "Combine like terms: 4x+x=5x, 6+9=15."
+  },
+  {
+    "question": "Find the perimeter of a rectangle with length 14 cm and width 9 cm",
+    "options": ["46 cm", "48 cm", "50 cm", "52 cm"],
+    "answer": "46 cm",
+    "explanation": "Perimeter = 2(length + width) = 2(14+9) = 46 cm."
+  },
+  {
+    "question": "Solve: y/4 = 12",
+    "options": ["36", "44", "48", "52"],
+    "answer": "48",
+    "explanation": "Multiply both sides by 4: y = 12 × 4 = 48."
+  },
+  
+  {
+    "question": "Simplify: 30x + 12x",
+    "options": ["42x", "40x", "38x", "36x"],
+    "answer": "42x",
+    "explanation": "Combine like terms: 30x + 12x = 42x."
+  },
+  {
+    "question": "Evaluate: (48 ÷ 12) × 5",
+    "options": ["15", "20", "25", "30"],
+    "answer": "20",
+    "explanation": "48 ÷ 12 = 4, then 4 × 5 = 20."
+  },
+  {
+    "question": "Solve for y: y/6 = 7",
+    "options": ["42", "36", "48", "30"],
+    "answer": "42",
+    "explanation": "Multiply both sides by 6: y = 7 × 6 = 42."
+  },
+  {
+    "question": "Expand: (x+11)(x+3)",
+    "options": ["x^2 + 14x + 33", "x^2 + 11x + 3", "x^2 + 13x + 33", "x^2 + 12x + 33"],
+    "answer": "x^2 + 14x + 33",
+    "explanation": "Multiply out: x×x=x^2, x×3=3x, 11×x=11x, 11×3=33. Total = x^2+14x+33."
+  },
+  {
+    "question": "Find the area of a rectangle with length 18 cm and width 7 cm",
+    "options": ["126 cm²", "120 cm²", "108 cm²", "135 cm²"],
+    "answer": "126 cm²",
+    "explanation": "Area = length × width = 18 × 7 = 126 cm²."
+  },
+  {
+    "question": "Simplify: 7^2",
+    "options": ["14", "21", "49", "56"],
+    "answer": "49",
+    "explanation": "7^2 means 7 × 7 = 49."
+  },
+  {
+    "question": "Solve: 12x - 24 = 0",
+    "options": ["1", "2", "3", "4"],
+    "answer": "2",
+    "explanation": "Add 24: 12x = 24, divide by 12: x = 2."
+  },
+  {
+    "question": "Simplify: (5x + 8) + (2x + 7)",
+    "options": ["7x + 15", "7x + 16", "5x + 15", "7x + 8"],
+    "answer": "7x + 15",
+    "explanation": "Combine like terms: 5x+2x=7x, 8+7=15."
+  },
+  {
+    "question": "Find the perimeter of a triangle with sides 9 cm, 12 cm, and 15 cm",
+    "options": ["36 cm", "38 cm", "40 cm", "42 cm"],
+    "answer": "36 cm",
+    "explanation": "Perimeter = 9 + 12 + 15 = 36 cm."
+  },
+  {
+    "question": "Solve: y - 25 = 60",
+    "options": ["85", "75", "65", "95"],
+    "answer": "85",
+    "explanation": "Add 25: y = 60 + 25 = 85."
+  },
+  
+  {
+    "question": "Simplify: 35x - 20x",
+    "options": ["15x", "25x", "30x", "20x"],
+    "answer": "15x",
+    "explanation": "Subtract like terms: 35x - 20x = 15x."
+  },
+  {
+    "question": "Evaluate: (54 ÷ 9) + 8",
+    "options": ["12", "13", "14", "15"],
+    "answer": "14",
+    "explanation": "54 ÷ 9 = 6, then 6 + 8 = 14."
+  },
+  {
+    "question": "Solve for y: 7y = 63",
+    "options": ["7", "8", "9", "10"],
+    "answer": "9",
+    "explanation": "Divide both sides by 7: y = 63 ÷ 7 = 9."
+  },
+  {
+    "question": "Expand: (x+12)(x+2)",
+    "options": ["x^2 + 14x + 24", "x^2 + 12x + 2", "x^2 + 10x + 24", "x^2 + 13x + 24"],
+    "answer": "x^2 + 14x + 24",
+    "explanation": "Multiply out: x×x=x^2, x×2=2x, 12×x=12x, 12×2=24. Total = x^2+14x+24."
+  },
+  {
+    "question": "Find the area of a square with side length 13 cm",
+    "options": ["169 cm²", "26 cm²", "39 cm²", "52 cm²"],
+    "answer": "169 cm²",
+    "explanation": "Area = side × side = 13 × 13 = 169 cm²."
+  },
+  {
+    "question": "Simplify: 8^2 - 5^2",
+    "options": ["39", "64", "25", "40"],
+    "answer": "39",
+    "explanation": "8^2 = 64, 5^2 = 25, difference = 64 - 25 = 39."
+  },
+  {
+    "question": "Solve: 14x + 7 = 35",
+    "options": ["2", "3", "4", "5"],
+    "answer": "2",
+    "explanation": "Subtract 7: 14x = 28, divide by 14: x = 2."
+  },
+  {
+    "question": "Simplify: (6x + 9) + (2x + 5)",
+    "options": ["8x + 14", "8x + 15", "6x + 14", "7x + 15"],
+    "answer": "8x + 14",
+    "explanation": "Combine like terms: 6x+2x=8x, 9+5=14."
+  },
+  {
+    "question": "Find the perimeter of a rectangle with length 16 cm and width 11 cm",
+    "options": ["54 cm", "50 cm", "48 cm", "56 cm"],
+    "answer": "54 cm",
+    "explanation": "Perimeter = 2(length + width) = 2(16+11) = 54 cm."
+  },
+  {
+    "question": "Solve: y - 40 = 25",
+    "options": ["65", "55", "75", "45"],
+    "answer": "65",
+    "explanation": "Add 40: y = 25 + 40 = 65."
+  },
+  
+  {
+    "question": "Simplify: 45x + 15x",
+    "options": ["60x", "55x", "50x", "65x"],
+    "answer": "60x",
+    "explanation": "Combine like terms: 45x + 15x = 60x."
+  },
+  {
+    "question": "Evaluate: (63 ÷ 9) + 20",
+    "options": ["26", "27", "28", "29"],
+    "answer": "27",
+    "explanation": "63 ÷ 9 = 7, then 7 + 20 = 27."
+  },
+  {
+    "question": "Solve for y: y - 50 = 30",
+    "options": ["70", "75", "80", "85"],
+    "answer": "80",
+    "explanation": "Add 50: y = 30 + 50 = 80."
+  },
+  {
+    "question": "Expand: (x+13)(x+4)",
+    "options": ["x^2 + 17x + 52", "x^2 + 13x + 4", "x^2 + 16x + 52", "x^2 + 14x + 52"],
+    "answer": "x^2 + 17x + 52",
+    "explanation": "Multiply out: x×x=x^2, x×4=4x, 13×x=13x, 13×4=52. Total = x^2+17x+52."
+  },
+  {
+    "question": "Find the area of a rectangle with length 20 cm and width 9 cm",
+    "options": ["180 cm²", "200 cm²", "160 cm²", "190 cm²"],
+    "answer": "180 cm²",
+    "explanation": "Area = length × width = 20 × 9 = 180 cm²."
+  },
+  {
+    "question": "Simplify: 9^2",
+    "options": ["81", "72", "90", "99"],
+    "answer": "81",
+    "explanation": "9^2 means 9 × 9 = 81."
+  },
+  {
+    "question": "Solve: 16x - 32 = 0",
+    "options": ["1", "2", "3", "4"],
+    "answer": "2",
+    "explanation": "Add 32: 16x = 32, divide by 16: x = 2."
+  },
+  {
+    "question": "Simplify: (7x + 10) + (3x + 5)",
+    "options": ["10x + 15", "10x + 14", "7x + 15", "9x + 15"],
+    "answer": "10x + 15",
+    "explanation": "Combine like terms: 7x+3x=10x, 10+5=15."
+  },
+  {
+    "question": "Find the perimeter of a square with side length 15 cm",
+    "options": ["45 cm", "50 cm", "60 cm", "75 cm"],
+    "answer": "60 cm",
+    "explanation": "Perimeter = 4 × side = 4 × 15 = 60 cm."
+  },
+  {
+    "question": "Solve: y/10 = 12",
+    "options": ["120", "110", "100", "130"],
+    "answer": "120",
+    "explanation": "Multiply both sides by 10: y = 12 × 10 = 120."
+  }
+]
+
+
+
+
+
+
+
+
+
+

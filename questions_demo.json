@@ -1,0 +1,26 @@
+[
+  {
+    "question": "What is 2 + 2?",
+    "options": ["3", "4", "5"],
+    "answer": "4",
+    "difficulty": "Easy",
+    "topic": "Algebra",
+    "explanation": "Adding 2 and 2 gives 4 because addition combines values."
+  },
+  {
+    "question": "Solve for x: 2x = 10",
+    "options": ["2", "5", "10"],
+    "answer": "5",
+    "difficulty": "Medium",
+    "topic": "Algebra",
+    "explanation": "Divide both sides by 2 to isolate x, giving x = 5."
+  },
+  {
+    "question": "What is the area of a square with side length 4?",
+    "options": ["8", "12", "16"],
+    "answer": "16",
+    "difficulty": "Hard",
+    "topic": "Geometry",
+    "explanation": "Area of a square is side × side, so 4 × 4 = 16."
+  }
+]
